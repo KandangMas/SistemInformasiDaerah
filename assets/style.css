@@ -1,4 +1,4 @@
-body {
+#app {
   margin-top: 20px;
   margin-left: 10%;
   margin-right: 10%;
@@ -19,6 +19,7 @@ body {
 
 .nav-sec .container-fluid .collapse ul li a {
   transition: 0.5s;
+  padding: 0px 10px 0 10px;
 }
 
 .nav-sec .container-fluid .collapse ul li a:hover {
@@ -112,4 +113,27 @@ body {
 .statistik .statistik-title {
   padding-bottom: 10px;
   border-bottom: 2px solid #2e94e3;
+}
+
+.profile {
+  margin-top: 15px;
+}
+
+.profile .profile-desa {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2e94e3;
+}
+
+.profile .table {
+  margin-top: 15px;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20px;
+}
+
+footer img {
+  font-size: 20px;
 }
