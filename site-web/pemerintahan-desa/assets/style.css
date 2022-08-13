@@ -29,19 +29,6 @@ body {
   font-size: 15px;
 }
 
-.card-text {
-  white-space: unset;
-  max-width: 100%;
-  max-height: fit-content;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card .card-footer .judul-artikel a {
-  text-decoration: none;
-  color: black;
-}
-
 /* Style side bar website */
 
 .datetime {
