@@ -78,3 +78,60 @@ for (let i = 0; i < elementclose.length; i++) {
     window.location = url;
   });
 }
+
+// script pie chart data pencaharian
+const data_pencaharian = {
+  labels: ['Petani', 'Nelayan', 'Dagang', 'Pekerja Bangunan', 'Peternak', 'Buruh', 'PNS', 'Swasta', 'Lain-lain'],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [431, 302, 115, 390, 15, 765, 69, 465, 8717],
+      backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'green', 'white', 'brown', 'gray', 'purple', 'red'],
+      hoverOffset: 4,
+    },
+  ],
+};
+const configp = {
+  type: 'doughnut',
+  data: data_pencaharian,
+  options: {},
+};
+const myChartPie = new Chart(document.getElementById('myChartP'), configp);
+
+// script pie chart data lahan
+const data_lahan = {
+  labels: ['Sawah: 1. IRIGASI PU, 2. IRIGASI NON PU, 3. TADAH HUJAN', 'Pemukiman', 'Tidak Diusahakan', 'Perkebunan', 'Rawa', 'Kolam/Empang', 'Jalan'],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [0, 470, 11, 15, 25, 8, 21],
+      backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'green', 'white', 'brown', 'gray', 'purple', 'red'],
+      hoverOffset: 4,
+    },
+  ],
+};
+const configl = {
+  type: 'doughnut',
+  data: data_lahan,
+  options: {},
+};
+const myChartL = new Chart(document.getElementById('myChartL'), configl);
+
+// script pie chart data budidaya
+const data_budidaya = {
+  labels: ['Sawah: 1. IRIGASI PU, 2. IRIGASI NON PU, 3. TADAH HUJAN', 'Pemukiman', 'Tidak Diusahakan', 'Perkebunan', 'Rawa', 'Kolam/Empang', 'Jalan'],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [0, 470, 11, 15, 25, 8, 21],
+      backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'green', 'white', 'brown', 'gray', 'purple', 'red'],
+      hoverOffset: 4,
+    },
+  ],
+};
+const configb = {
+  type: 'doughnut',
+  data: data_budidaya,
+  options: {},
+};
+const myChartB = new Chart(document.getElementById('myChartB'), configb);

@@ -78,3 +78,22 @@ for (let i = 0; i < elementclose.length; i++) {
     window.location = url;
   });
 }
+
+// script pie chart data budidaya
+const data_budidaya = {
+  labels: ['Perikanan', 'Peternakan', 'Perkebunan', 'Pertanian'],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [0, 1, 0, 1],
+      backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'green', 'white', 'brown', 'gray', 'purple', 'red'],
+      hoverOffset: 4,
+    },
+  ],
+};
+const configb = {
+  type: 'doughnut',
+  data: data_budidaya,
+  options: {},
+};
+const myChartB = new Chart(document.getElementById('myChartB'), configb);

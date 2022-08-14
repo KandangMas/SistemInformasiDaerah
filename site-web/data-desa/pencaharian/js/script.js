@@ -78,3 +78,22 @@ for (let i = 0; i < elementclose.length; i++) {
     window.location = url;
   });
 }
+
+// script pie chart data pencaharian
+const data_pencaharian = {
+  labels: ['Petani', 'Nelayan', 'Dagang', 'Pekerja Bangunan', 'Peternak', 'Buruh', 'PNS', 'Swasta', 'Lain-lain'],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [431, 302, 115, 390, 15, 765, 69, 465, 8717],
+      backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'green', 'white', 'brown', 'gray', 'purple', 'red'],
+      hoverOffset: 4,
+    },
+  ],
+};
+const configp = {
+  type: 'doughnut',
+  data: data_pencaharian,
+  options: {},
+};
+const myChartPie = new Chart(document.getElementById('myChartP'), configp);

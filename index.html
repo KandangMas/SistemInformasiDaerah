@@ -16,48 +16,8 @@
     <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
-    <!-- Script Digital Clock -->
-    <script>
-        function updateClock() {
-            var now = new Date();
-            var dname = now.getDay(),
-                mo = now.getMonth(),
-                dnum = now.getDate(),
-                yr = now.getFullYear(),
-                hou = now.getHours(),
-                min = now.getMinutes(),
-                sec = now.getSeconds(),
-                pe = "AM";
-
-            if (hou == 0) {
-                hou = 12;
-            }
-            if (hou > 12) {
-                hou = hou - 12;
-                pe = "PM";
-            }
-
-            Number.prototype.pad = function (digits) {
-                for (var n = this.toString(); n.length < digits; n = 0 + n);
-                return n;
-            }
-
-            var months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
-                "Oktober", "November", "Desember"
-            ];
-            var week = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
-            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "second", "period"];
-            var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
-            for (var i = 0; i < ids.length; i++)
-                document.getElementById(ids[i]).firstChild.nodeValue = values[i];
-        }
-
-        function initClock() {
-            updateClock();
-            window.setInterval("updateClock()", 1);
-        }
-    </script>
+    <!-- Leaflet For Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 
     <title>
         Desa Kandang Mas
@@ -92,16 +52,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">BERANDA</a>
+                            <a class="nav-link" aria-current="page" href="index.html">BERANDA</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 PROFIL DESA</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="site-web/profil-desa/profil-wilayah-desa.html">PROFIL
+                                <li><a class="dropdown-item"
+                                        href="site-web/profil-desa/profile/profil-wilayah-desa.html">PROFIL
                                         WILAYAH DESA</a></li>
-                                <li><a class="dropdown-item" href="site-web/profil-desa/sejarah-desa.html">SEJARAH
+                                <li><a class="dropdown-item"
+                                        href="site-web/profil-desa/sejarah/sejarah-desa.html">SEJARAH
                                         DESA</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -114,10 +76,12 @@
                                 aria-expanded="false">
                                 PEMERINTAHAN DESA</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="site-web/pemerintahan-desa/visi-misi.html">VISI DAN
+                                <li><a class="dropdown-item"
+                                        href="site-web/pemerintahan-desa/visi-misi/visi-misi.html">VISI DAN
                                         MISI</a></li>
                                 <li><a class="dropdown-item"
-                                        href="site-web/pemerintahan-desa/pemerintahan-desa.html">PEMERINTAHAN DESA</a>
+                                        href="site-web/pemerintahan-desa/pemerintahan/pemerintahan-desa.html">PEMERINTAHAN
+                                        DESA</a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -131,18 +95,33 @@
                                 DATA DESA</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item"
-                                        href="site-web/data-desa/data-wilayah-administratif.html">DATA WILAYAH
+                                        href="site-web/data-desa/administrasi/data-wilayah-administratif.html">DATA
+                                        WILAYAH
                                         ADMINISTRATIF</a></li>
-                                <li><a class="dropdown-item" href="#">DATA PENCAHARIAN PENDUDUK</a></li>
-                                <li><a class="dropdown-item" href="#">DATA PEMANFAATAN LAHAN</a></li>
-                                <li><a class="dropdown-item" href="#">DATA JUMLAH KELOMPOK USAHA BUDIDAYA</a></li>
-                                <li><a class="dropdown-item" href="#">DATA BANGUNAN</a></li>
-                                <li><a class="dropdown-item" href="#">DATA SUSUNAN RAJO PENGHULU</a></li>
+                                <li><a class="dropdown-item"
+                                        href="site-web/data-desa/pencaharian/pencaharian-penduduk.html">DATA
+                                        PENCAHARIAN PENDUDUK</a></li>
+                                <li><a class="dropdown-item"
+                                        href="site-web/data-desa/lahan/data-pemanfaatan-lahan.html">DATA
+                                        PEMANFAATAN LAHAN</a></li>
+                                <li><a class="dropdown-item"
+                                        href="site-web/data-desa/budidaya/data-kelompok-usaha-budidaya.html">DATA JUMLAH
+                                        KELOMPOK
+                                        USAHA BUDIDAYA</a></li>
+                                <li><a class="dropdown-item" href="site-web/data-desa/bangunan/data-bangunan.html">DATA
+                                        BANGUNAN</a></li>
+                                <li><a class="dropdown-item"
+                                        href="site-web/data-desa/penghulu/susunan-rajo-penghulu.html">DATA
+                                        SUSUNAN RAJO PENGHULU</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="site-web/potensi-desa/potensi-desa.html">POTENSI DESA</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">INFORMASI COVID</a>
@@ -366,6 +345,10 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="peta">
+                        <h4>Peta Kelurahan Kandang Mas</h4>
+                        <div id='map'></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -404,41 +387,16 @@
         <!-- Copyright -->
     </footer>
 
+    <!-- Leafleat For Map -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
 
-    <!-- Script barchart -->
-    <script>
-        const labels = [
-            'Laki-laki',
-            'Perempuan',
-            'Total'
-        ];
-
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'Jumlah Penduduk',
-                backgroundColor: '#2e94e3',
-                borderColor: "#2e94e3",
-                data: [5634, 5635, 11269],
-            }]
-        };
-
-        const config = {
-            type: 'bar',
-            data: data,
-            options: {}
-        };
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
-    </script>
-
+    <!-- koneksi ke script.js -->
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
