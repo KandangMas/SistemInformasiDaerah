@@ -132,79 +132,87 @@
         </nav>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-9" style="padding-left: 30%; padding-right: 30%; padding-top: 20%;">
-                    <h2 class="" style="position: relative; text-align: center; color: red;">BELUM ADA DATA</h2>
-                </div>
-                <div class="col-sm-3 mt-2">
-                    <!-- digital clock start -->
-                    <div class="datetime">
-                        <div class="date">
-                            <span id="dayname">Day</span>,
-                            <span id="month">Month</span>,
-                            <span id="daynum">00</span>,
-                            <span id="year">Year</span>
+                <h3 class="title-data">VISI DAN MISI</h1>
+                    <div class="col-sm-9" style="padding-left: 25%; padding-right: 25%;">
+                        <h4 class="" style="position: relative; text-align: center; font-weight: bold;">VISI</h4>
+                        <p style="text-align: center; font-weight: bolder;">"Melayanai Masyarakat Dengan Pelayanan
+                            Prima"
+                        </p>
+                        <h4 class="" style="position: relative; text-align: center; font-weight: bold;">MISI</h4>
+                        <p style="text-align: center; font-weight: bolder;">Terlaksananya Administrasi Pemerintah dan
+                            Kesejahtraan Rakyat"
+                        </p>
+                    </div>
+                    <div class="col-sm-3 mt-2">
+                        <!-- digital clock start -->
+                        <div class="datetime">
+                            <div class="date">
+                                <span id="dayname">Day</span>,
+                                <span id="month">Month</span>,
+                                <span id="daynum">00</span>,
+                                <span id="year">Year</span>
+                            </div>
+                            <div class="time">
+                                <span id="hour">00</span>:
+                                <span id="minutes">00</span>:
+                                <span id="second">00</span>
+                                <span id="period">AM</span>
+                            </div>
                         </div>
-                        <div class="time">
-                            <span id="hour">00</span>:
-                            <span id="minutes">00</span>:
-                            <span id="second">00</span>
-                            <span id="period">AM</span>
+                        <!-- Digital Clock End -->
+
+                        <div class="kategori">
+                            <h4 class="kategori-title">KATEGORI</h4>
+                            <a href="">>> Berita Desa</a><br>
+                            <a href="">>> Program Kerja</a>
+                        </div>
+
+                        <!-- Barchart -->
+                        <div class="statistik">
+                            <h4 class="statistik-title">STATISTIK PENDUDUK</h4>
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Profile Desa -->
+                        <div class="profile">
+                            <h4 class="profile-desa">Profile Kandang Mas</h4>
+                            <table class="table table-info table-striped table-bordered border-info">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Kelurahan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Negara</td>
+                                        <td>Indonesia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Provinsi</td>
+                                        <td>Bengkulu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kota</td>
+                                        <td>Bengkulu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kecamatan</td>
+                                        <td>Kampung Melayu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luas Wilayah</td>
+                                        <td>550 ha</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="peta">
+                            <h4>Peta Kelurahan Kandang Mas</h4>
+                            <div id='map'></div>
                         </div>
                     </div>
-                    <!-- Digital Clock End -->
-
-                    <div class="kategori">
-                        <h4 class="kategori-title">KATEGORI</h4>
-                        <a href="">>> Berita Desa</a><br>
-                        <a href="">>> Program Kerja</a>
-                    </div>
-
-                    <!-- Barchart -->
-                    <div class="statistik">
-                        <h4 class="statistik-title">STATISTIK PENDUDUK</h4>
-                        <div>
-                            <canvas id="myChart"></canvas>
-                        </div>
-                    </div>
-
-                    <!-- Profile Desa -->
-                    <div class="profile">
-                        <h4 class="profile-desa">Profile Kandang Mas</h4>
-                        <table class="table table-info table-striped table-bordered border-info">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Kelurahan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Negara</td>
-                                    <td>Indonesia</td>
-                                </tr>
-                                <tr>
-                                    <td>Provinsi</td>
-                                    <td>Bengkulu</td>
-                                </tr>
-                                <tr>
-                                    <td>Kota</td>
-                                    <td>Bengkulu</td>
-                                </tr>
-                                <tr>
-                                    <td>Kecamatan</td>
-                                    <td>Kampung Melayu</td>
-                                </tr>
-                                <tr>
-                                    <td>Luas Wilayah</td>
-                                    <td>550 ha</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="peta">
-                        <h4>Peta Kelurahan Kandang Mas</h4>
-                        <div id='map'></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
